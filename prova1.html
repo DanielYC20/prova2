@@ -4,12 +4,17 @@
 <body>
 
 <h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<p> id="principal">This is a page</p>
 
 <script>
 	fetch('missatge.txt')
 	.then(resposta => resposta.text())
-	.then(text => console.log(text))
+	.then(text => {
+	document
+	.getElementById("principal")
+	.innerHTML = text;
+	
+	})
 	.catch(error => console.log(error));
 </script>
 
